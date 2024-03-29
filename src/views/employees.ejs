@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMPLOYEES</title>
+</head>
+<body>
+  <h1>List of employees</h1>
+    <ul>
+      <% if (employees.length === 0) { %>
+        <p>No employees</p>
+      <% } else { %>
+        <% employees.forEach(employee => { %>
+          <li>
+            <strong>Username:</strong> <%= employee.username %>,
+            <strong>Remaining Holidays:</strong> <%= employee.remainingHolidays %>
+            <strong>Role: </strong> <%= employee.role %>
+          </li>
+        <% }); %>
+      <% } %>
+    </ul>
+  <a href="/">&larr;Go back</a>
+</body>
+</html>

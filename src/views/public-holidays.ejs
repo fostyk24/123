@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Holidays</title>
+</head>
+<body>
+  <h1>Public Holidays</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% publicHolidays.forEach(holiday => { %>
+        <tr>
+          <td><%= holiday.name %></td>
+          <td><%= holiday.date %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

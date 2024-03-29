@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADD HOLIDAY</title>
+</head>
+<body> 
+  <h1>Add holiday</h1>
+  <form action="/add-request" method="POST">
+    <form action="/add-request" method="POST">
+      <label for="employeeId">Employee username: <%= employee.username %></label> <br>
+    <label for="startDate">Start Date: </label>
+    <input type="date" id="startDate" name="startDate" required><br>
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" required>
+    <button type="submit">Submit</button>
+  </form>
+  <a href="/"> &larr;Go back</a>
+</body>
+
+<% if(statusCode === 400){ %>
+  <script>
+      const errorMessage = "<%= errorMessage %>";
+      alert(errorMessage);
+  </script>
+  <% } %>
+</html>
